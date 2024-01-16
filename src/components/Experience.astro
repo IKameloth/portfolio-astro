@@ -1,0 +1,44 @@
+---
+import ExperienceItem from './ExperienceItem.astro'
+
+const EXPERIENCE = [
+  {
+    date: 'Mayo 2022 - Enero 2024',
+    title: 'Jumpitt Labs S.A.',
+    description:
+      'Desarrollo de aplicación web para el sector agrícola utilizando Micro-Frontends con ReactJS - TS - Redux - Antd y Backend for Frontend utilizando NestJS como un API Gateway. Soporte y desarrollo de sistema para el sector financiero utilizando ReactJS - MUI en el frontend y ReactNative para la app mobile. Soporte para sistema web del sector notarial utilizando ReactJS - TS - Tailwind. Soporte para Trust Technologies con servicios tipo API Gateway utilizando RubyOnRails',
+    link: ''
+  },
+  {
+    date: 'Septiembre 2018 - Mayo 2022',
+    title: 'Autentia S.A.',
+    description:
+      'Aplicación Web para el área de administración y sistemas en RubyOnRails - Javascript - Bootstrap. Sistema de verificación de identidad y auditorías internas con RubyOnRails - Javascript - Bulma. Desarrollo de API Rest con RubyOnRails. Desarrollo de Sistema de administración de lectores de huellas digitales con ReactJS - Redux - TS',
+    link: ''
+  },
+  {
+    date: 'Diciembre 2017- Septiembre 2018',
+    title: 'Jumpitt Labs S.A.',
+    description:
+      'Sistema de control de RRHH construido en Laravel - Javascript - Bootstrap. Desarrollo de API Rest con Laravel',
+    link: ''
+  },
+  {
+    date: 'Abril 2017- Agosto 2017',
+    title: 'Qality S.A.',
+    description:
+      'Desarrollo de aplicación web para sector portuario utlizando PHP - CodeIgniter - Javascript - JQuery. Diseño y desarrollo de landings pages con HTML - CSS - Javascript - Jquery.',
+    link: ''
+  }
+]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

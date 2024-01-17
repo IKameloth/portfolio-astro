@@ -8,58 +8,75 @@ import GmailIcon from '../components/icons/GmailIcon.astro'
 import Experience from '../components/Experience.astro'
 import SectionContainer from '../components/SectionContainer.astro'
 import Briefcase from '../components/icons/Briefcase.astro'
+import CodeIcon from '../components/icons/CodeIcon.astro'
+import ProfileCheckIcon from '../components/icons/ProfileCheckIcon.astro'
+import Projects from '../components/Projects.astro'
+import AboutMe from '../components/AboutMe.astro'
 ---
 
-<Layout title="Portafolio cmatteo - Desarrollador y Programador Web">
-  <main>
-    <SectionContainer class="py-40 px-20">
+<Layout title="Camilo Matteo - Desarrollador Web" description="desarrollador de aplicaciones web">
+  <main class="px-4">
+    <SectionContainer class="py-44 px-32">
       <img
-        class="rounded-full w-28 h-28 mb-4"
+        class="rounded-full size-16 mb-4"
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgJTZD9yIHJZv4h1TFCUDxh8jsBaLYr0MnwA-GzqmpTg&s"
-        alt="profile photo"
+        alt="cmatteo photo"
       />
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
-        Hola! Soy CMatteo
+      <h1
+        class="text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hola, Soy Camilo Matteo
         <a
           href="https://www.linkedin.com/in/camilo-matteo-98143619b/?originalSubdomain=cl"
           target="_blank"
           rel="noopener"
-          class="flex justify-center items-center"
+          class="flex justify-center items-center hover:scale-105 transition"
         >
-          <Badge>Disponible para trabajar 🚀</Badge>
+          <Badge>Disponible para trabajar</Badge>
         </a>
       </h1>
-      <h2 class="text-2xl text-wrap">
-        Soy un profesional con +3 años experiencia como Desarrollador Frontend. Me considero una persona apasionada por
-        codear, desarrollando soluciones ordenadas, limpias, legibles y aplicando buenas practicas en lo posible. Soy
-        proactivo, estoy constantemente adquiriendo conocimientos, trabajo bien en equipo y me adapto con facilidad ante
-        los cambios.
-        <span>+6 años de experiencia.</span>
-        <span class="text-yellow-200/90">Desarrollador Web</span> ejerciendo como
-        <span class="text-yellow-200/90">Frontend</span> y
-        <span class="text-yellow-200/90">Backend</span> en diferentes proyectos. Soy de Santiago de Chile 🇨🇱
+      <h2 class="text-xl lg:text-2xl text-balance max-w-[700px] text-back dark:text-white">
+        Soy un profesional con <span>+6 años experiencia</span> como <span class="text-yellow-800 dark:text-yellow-200"
+          >Desarrollador Web</span
+        >, apasionado por escribir código, priorizando las buenas practicas, entregar soluciones limpias, ordenadas y
+        legibles. Me considero una persona proactiva, me gusta trabajar en equipo y me adapto con facilidad ante los
+        cambios.
       </h2>
-      <nav class="flex gap-x-2 mt-8">
+      <nav class="flex gap-4 mt-8 flex-wrap">
         <SocialPill href="https://www.linkedin.com/in/camilo-matteo-98143619b/">
-          <LinkedInIcon class="size-6" />
+          <LinkedInIcon class="size-4 md:size-6" />
           LinkedIn
         </SocialPill>
         <SocialPill href="https://github.com/IKameloth">
-          <GitHubIcon class="size-6" />
+          <GitHubIcon class="size-4 md:size-6" />
           GitHub
         </SocialPill>
-        <SocialPill>
-          <GmailIcon class="size-6" />
+        <SocialPill href="mailto:matteo.camilo.k@gmail.com">
+          <GmailIcon class="size-4 md:size-6" />
           matteo.camilo.k@gmail.com
         </SocialPill>
       </nav>
     </SectionContainer>
     <SectionContainer id="experience">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80">
         <Briefcase class="size-7" />
         Experiencia laboral
       </h2>
       <Experience />
+    </SectionContainer>
+    <SectionContainer id="projects">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80">
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+    <SectionContainer id="about-me">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80">
+        <ProfileCheckIcon class="size-7" />
+        Sobre mí
+      </h2>
+      <AboutMe />
     </SectionContainer>
   </main>
 </Layout>
